@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Європа</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+
+        .content-block {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .modal-fullscreen {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            position: fixed;
+            left: 0; top: 0; right: 0; bottom: 0;
+        }
+
+        .modal-fullscreen .modal-content {
+            height: 100%;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen img {
+            width: 95%;
+            height: auto;
+        }
+        p{
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="../Головна.html"><img src="../img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="../eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="../eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="../eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="../asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="../asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="../asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../SA/usa.html">США</a>
+                        <a class="dropdown-item" href="../SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="../SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="../SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="../EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="../EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="../EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="5" style="text-align: center; margin: 20px;">
+                <h2>Виноробні регіону Мендоса</h2>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100" style="text-align: center; margin: 5px;">
+                <img src="../Argentina/виноробні_мендосу.jpg" style="width: 80%;" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px; font-size: 17px;">
+                <p>Мендоса є провінцією в Аргентині, відомою своїми виноробними регіонами, які входять до п'яти найбільших у світі. Регіон Мендоса знаходиться в західній частині країни, у східних схилах Анд, і є одним з найважливіших центрів виноробства в Південній Америці. </p>
+                <p>Клімат Мендоси дуже сприятливий для вирощування винограду, завдяки сухому та сонячному літньому сезону, мінімальному опаду та великим варіаціям в температурних режимах між днями і ночами. Ці умови дозволяють виноградникам вирощувати високоякісні сорти винограду з відмінними ароматичними та смаковими характеристиками. </p>
+                <p>Основні виноробні регіони Мендоси включають Маїпу (Maipú), Луйян-де-Куюо (Luján de Cuyo), Валле-де-Уко (Valle de Uco) і Мендоса (Mendoza), які є центрами виноробства з довгою історією та традиціями. Виноградники розташовані на висоті від 600 до 1500 метрів над рівнем моря, що дозволяє виробляти різноманітні сорти вин з унікальними характеристиками. </p>
+                <p>Серед найпопулярніших сортів вин, вироблених в Мендосі, можна виділити Мальбек (Malbec), який є символом аргентинського виноробства і відомий своїми смаковими нотками чорних фруктів та шоколаду. Крім того, в регіоні виробляють вина з Каберне-Совіньон (Cabernet Sauvignon), Сира (Syrah), Мерло (Merlot) і Чардоне (Chardonnay), серед інших сортів. </p>
+                <p>Виноробство в Мендосі не тільки є важливим галузевим сектором економіки регіону, але й приваблює туристів з усього світу, які бажають насолодитися винним туризмом і відвідати виноробні, де можна побачити процес виробництва вина та спробувати найкращі зразки місцевих вин. </p>
+                <p>Узагалі, Мендоса відома своїм багатим виноробним спадщиною, яка поєднує традиційні методи з сучасними технологіями, створюючи унікальні вина високої якості, що залишаються популярними серед шанувальників вина по всьому світу. </p>                
+            </div>
+        </div>    
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/your_telegram" target="_blank">
+            <img src="../img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=YOURNUMBER" target="_blank">
+            <img src="../img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram" target="_blank">
+            <img src="../img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 10px; top: 10px; font-size: 2rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="../Argentina/виноробні_мендосу.jpg" class="img-fluid" alt="Колізей">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
