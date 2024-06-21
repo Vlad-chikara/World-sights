@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+        .inf {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            margin-bottom: 30px;
+            height: 200px;
+            text-indent: 15px;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+        #map {
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="Головна.html"><img src="img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="SA/usa.html">США</a>
+                        <a class="dropdown-item" href="SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Мапа -->
+    <div class="container mt-4">
+        <div id="map" data-aos="fade-in"></div>
+    </div>
+    
+    <!-- Інформаційні блоки -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="inf">
+                    <h3>Про сайт</h3>
+                    <p>На нашому сайті ви знайдете інформацію про різні міста світу, включаючи їх історію, культуру та основні туристичні пам'ятки. Карта світу з інтерактивними позначками дозволить вам швидко знайти потрібне місто і переглянути коротку інформацію про нього.</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="inf">
+                    <h3>Для кого цей сайт</h3>
+                    <p>Цей сайт створений для мандрівників, туристів та всіх, хто цікавиться різними містами світу. Ви зможете дізнатися більше про відомі місця, знайти цікаві факти та отримати натхнення для подорожей.</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="inf">
+                    <h3>Що ви знайдете на сайті</h3>
+                    <ul>
+                        <li>Інтерактивна карта світу з позначками міст</li>
+                        <li>Інформація про історію та культуру міст</li>
+                        <li>Основні туристичні пам'ятки</li>
+                        <li>Корисні поради для подорожей</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="inf">
+                    <h3>Наші послуги</h3>
+                    <p>Ми надаємо послуги з організації індивідуальних та групових турів по всьому світу. Наша команда професіоналів допоможе вам спланувати ідеальну подорож, враховуючи всі ваші побажання і потреби.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/Vlad_quell" target="_blank">
+            <img src="img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=[%2B380980097728]" target="_blank">
+            <img src="img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/__vlad_19_?igsh=YWkwa3V6eW1zZHMz" target="_blank">
+            <img src="img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+    
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var map = L.map('map').setView([20, 0], 2);
+
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+            }).addTo(map);
+
+            
+            var markers = [
+    {
+        coords: [50.4344, 30.5573],
+        name: 'Києво-Печерська Лавра',
+        url: 'Ukraine/Києво-Печерська.html'
+    },
+    {
+        coords: [50.4529, 30.5144],
+        name: 'Софійський собор',
+        url: 'Ukraine/Соф.соб.html'
+    },
+    {
+        coords: [48.6766, 26.5808],
+        name: "Кам'янець-Подільська фортеця",
+        url: 'Ukraine/кпф.html'
+    },
+    {
+        coords: [46.4856, 30.7414],
+        name: 'Одеський національний академічний театр опери та балету',
+        url: 'Ukraine/ОдеськаОпера.html'
+    },
+    {
+        coords: [41.8902, 12.4922],
+        name: 'Колізей',
+        url: 'Itali/Колізей.html'
+    },
+    {
+        coords: [41.9029, 12.4534],
+        name: 'Собор Святого Петра',
+        url: 'Itali/Собор святого петра.html'
+    },
+    {
+        coords: [41.8905, 12.4923],
+        name: 'Тріумфальна арка Константина',
+        url: 'Itali/Тріумфальна арка Константина.html'
+    },
+    {
+        coords: [43.7230, 10.3966],
+        name: 'Пізанська вежа',
+        url: 'Itali/Пізанська вежа.html'
+    },
+    {
+        coords: [48.8584, 2.2945],
+        name: 'Ейфелева вежа',
+        url: 'France/Ейфелева вежа.html'
+    },
+    {
+        coords: [48.8606, 2.3376],
+        name: 'Лувр',
+        url: 'France/Лувр.html'
+    },
+    {
+        coords: [48.8527, 2.3508],
+        name: 'Нотр-Дам де Пари',
+        url: 'France/Нотр-Дам де Пари.html'
+    },
+    {
+        coords: [48.8049, 2.1203],
+        name: 'Версальський палац',
+        url: 'France/Версальський палац.html'
+    },
+    {
+        coords: [41.4036, 2.1744],
+        name: 'Саграда Фамілія',
+        url: 'Spain/Саграда Фамілія.html'
+    },
+    {
+        coords: [37.1760, -3.5881],
+        name: 'Альгамбра',
+        url: 'Spain/Альгамбра.html'
+    },
+    {
+        coords: [37.8847, -4.7769],
+        name: 'Мескіта',
+        url: 'Spain/Мескіта.html'
+    },
+    {
+        coords: [41.4145, 2.1527],
+        name: 'Парк Гуель',
+        url: 'Spain/Парк Гуель.html'
+    },
+    {
+        coords: [34.9949, 135.7850],
+        name: 'Храм Кійомідзу Дера',
+        url: 'Japan/Храм Кійомідзу Дера.html'
+    },
+    {
+        coords: [35.6586, 139.7454],
+        name: 'Токійська вежа',
+        url: 'Japan/Токійська вежа.html'
+    },
+    {
+        coords: [34.3914, 132.4519],
+        name: 'Меморіал миру',
+        url: 'Japan/Меморіал миру.html'
+    },
+    {
+        coords: [34.6873, 135.5259],
+        name: 'Замок Осака',
+        url: 'Japan/Замок Осака.html'
+    },
+    {
+        coords: [40.4319, 116.5704],
+        name: 'Велика китайська стіна',
+        url: 'China/Велика китайська стіна.html'
+    },
+    {
+        coords: [34.3849, 109.2784],
+        name: 'Теракотова армія',
+        url: 'China/Теракотова армія.html'
+    },
+    {
+        coords: [31.2402, 121.4900],
+        name: 'Набережна Вайтань',
+        url: 'China/Набережна Вайтань.html'
+    },
+    {
+        coords: [32.0584, 118.7965],
+        name: 'Мавзолей Сунь Ятсена',
+        url: 'China/Мавзолей Сунь Ятсена.html'
+    },
+    {
+        coords: [27.1751, 78.0421],
+        name: 'Тадж-Махал',
+        url: 'India/Тадж-Махал.html'
+    },
+    {
+        coords: [28.6562, 77.2410],
+        name: 'Червоний форт',
+        url: 'India/Червоний форт.html'
+    },
+    {
+        coords: [26.9239, 75.8267],
+        name: 'Гава-Махал',
+        url: 'India/Гава-Махал.html'
+    },
+    {
+        coords: [28.6129, 77.2295],
+        name: 'Ворота Індії',
+        url: 'India/Ворота Індії.html'
+    },
+    {
+        coords: [21.4225, 39.8262],
+        name: 'Велика мечеть',
+        url: 'Saud Ar/Велика мечеть.html'
+    },
+    {
+        coords: [24.4670, 39.6119],
+        name: 'Мечеть Пророка',
+        url: 'Saud Ar/Мечеть Пророка.html'
+    },
+    {
+        coords: [24.6319, 46.7125],
+        name: 'Форт Масмак',
+        url: 'Saud Ar/Форт Масмак.html'
+    },
+    {
+        coords: [26.8497, 37.9576],
+        name: 'Хегра',
+        url: 'Saud Ar/Хегра.html'
+    },
+    {
+        coords: [-22.9519, -43.2105],
+        name: 'Статуя Христа-Спасителя',
+        url: 'Brazil/Статуя христа.html'
+    },
+    {
+        coords: [-23.5614, -46.6559],
+        name: 'Авеніда Пауліста',
+        url: 'Brazil/Аведіна Пауліста.html'
+    },
+    {
+        coords: [-12.9714, -38.5014],
+        name: 'Історичний центр Пелурінью',
+        url: 'Brazil/Історичний центр Пелурінью.html'
+    },
+    {
+        coords: [-25.6953, -54.4367],
+        name: 'Водоспади Ігуасу',
+        url: 'Brazil/Водоспади Ігасу.html'
+    },
+    {
+        coords: [-34.6118, -58.4173],
+        name: 'Обеліск',
+        url: 'Argentina/Обеліск.html'
+    },
+    {
+        coords: [-54.8019, -68.3020],
+        name: 'Національний парк Вогняна Земля',
+        url: 'Argentina/Вогняна Земля.html'
+    },
+    {
+        coords: [-31.4173, -64.1833],
+        name: 'Єзуїтський квартал',
+        url: 'Argentina/Єзуїтський кв.html'
+    },
+    {
+        coords: [-32.8895, -68.8458],
+        name: 'Виноробні регіону Мендоса',
+        url: 'Argentina/Виноробні регіону Мендоса.html'
+    },
+    {
+        coords: [-13.1631, -72.5450],
+        name: 'Мачу-Пікчу',
+        url: 'peru/Мачу-Пікчу.html'
+    },
+    {
+        coords: [-12.0464, -77.0428],
+        name: 'Плаза Майор',
+        url: 'peru/Плаза Майор.html'
+    },
+    {
+        coords: [-16.3988, -71.5369],
+        name: 'Монастир Санта-Каталіна',
+        url: 'peru/Монастир Санта-Каталіна.html'
+    },
+    {
+        coords: [-15.8798, -69.3356],
+        name: 'Острови Урос на озері Тітікака',
+        url: 'peru/Острови Урос на озері Тітікака.html'
+    },
+    {
+        coords: [-13.5339, -71.9675],
+        name: 'Плаза Майор',
+        url: 'peru/Плаза Майор.html'
+    },
+    {
+        coords: [-33.0472, -71.6127],
+        name: 'Історичний квартал',
+        url: 'chilli/Історичний квартал.html'
+    },
+    {
+        coords: [-51.0344, -72.9969],
+        name: 'Національний парк Торрес-дель-Пайне',
+        url: 'chilli/Національний парк Торрес-дель-Пайне.html'
+    },
+    {
+        coords: [-22.8956, -68.2039],
+        name: 'Місячна долина',
+        url: 'chilli/Місячна Долина.html'
+    },
+    {
+        coords: [38.8893, -77.0502],
+        name: 'Національний Молл',
+        url: 'USA/Національний Молл.html'
+    },
+    {
+        coords: [40.6892, -74.0445],
+        name: 'Статуя Свободи',
+        url: 'USA/Статуя свободи.html'
+    },
+    {
+        coords: [37.8199, -122.4783],
+        name: 'Золоті Ворота',
+        url: 'USA/Золоті Ворота.html'
+    },
+    {
+        coords: [34.1016, -118.3258],
+        name: 'Голлівудська Алея Слави',
+        url: 'USA/Голлівудська Алея Слави.html'
+    },
+    {
+        coords: [45.4248, -75.6992],
+        name: 'Парламентський пагорб',
+        url: 'Canada/Парламентський пагорб.html'
+    },
+    {
+        coords: [43.6426, -79.3871],
+        name: 'Вежа CN',
+        url: 'Canada/Вежа CN.html'
+    },
+    {
+        coords: [45.5025, -73.5544],
+        name: 'Старий порт',
+        url: 'Canada/Старий порт.html'
+    },
+    {
+        coords: [49.3043, -123.1443],
+        name: 'Стенлі Парк',
+        url: 'Canada/Стенлі Парк.html'
+    },
+    {
+        coords: [19.6939, -98.8431],
+        name: 'Теотіуакан',
+        url: 'Mexica/Теотіукан.html'
+    },
+    {
+        coords: [20.6843, -88.5678],
+        name: 'Чичен-Іца',
+        url: 'Mexica/Чичен-Іца.html'
+    },
+    {
+        coords: [20.6744, -103.3466],
+        name: 'Інститут культур Кабаньяс',
+        url: 'Mexica/Інститут культур Кабаньяс.html'
+    },
+    {
+        coords: [22.8883, -109.9120],
+        name: 'Малеон',
+        url: 'Mexica/Малеон.html'
+    },
+    {
+        coords: [18.0179, -76.8099],
+        name: 'Музей Боба Марлі',
+        url: 'Jamayka/Музей Боба Марлі.html'
+    },
+    {
+        coords: [18.4763, -77.6697],
+        name: 'Водоспад Даннс-Рівер',
+        url: 'Jamayka/Водоспад Даннс-Рівер.html'
+    },
+    {
+        coords: [18.2838, -78.3476],
+        name: 'Пляж Севен-Майл',
+        url: 'Jamayka/Пляж Севен-Майл.html'
+    },
+    {
+        coords: [18.4825, -77.8939],
+        name: 'Музей Роуз Холл',
+        url: 'Jamayka/Музей Роуз Холл.html'
+    },
+    {
+        coords: [0 , 0], //Координати які потрібно вказати
+        name: 'Назва памятки',
+        url: 'Посилання на памятку'
+    }
+];
+
+
+            markers.forEach(function (marker) {
+                var leafletMarker = L.marker(marker.coords).addTo(map)
+                    .bindPopup('<a href="' + marker.url + '" target="_blank">' + marker.name + '</a>');
+                leafletMarker.on('mouseout', function (e) {
+                    var popup = e.target.getPopup();
+                    popup.setContent('<a href="' + marker.url + '" target="_blank">' + marker.name + '</a>');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Європа</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+        .card-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .card {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-title {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            margin: 0;
+            transition: transform 0.3s;
+        }
+        .card-content {
+            position: absolute;
+            bottom: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            
+            transition: bottom 0.3s;
+        }
+        .card:hover .card-content {
+            bottom: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="Головна.html"><img src="img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="SA/usa.html">США</a>
+                        <a class="dropdown-item" href="SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- Картки з інформацією -->
+    <div class="container mt-5">
+        <div class="row" data-aos="fade-up" data-aos-delay="5" >
+            <div class="col-md-6  mb-4 card-container"  >
+                <div class="card" style="background-image: url('img/statuja-hrista-spasitelja.jpg');">
+                    <h5 class="card-title"> Статуя Христа-Спасителя</h5>
+                    <div class="card-content">
+                        <p>Країна: Бразилія<br>
+                            Місто: Ріо-де-Жанейро<br>
+                            Дата створення: 1931 рік<br>
+                            Рейтинг туристів: 4.8/5 <br> <a href="Brazil/Статуя христа.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/аведіна_пауліста.jpg');">
+                    <h5 class="card-title">Авеніда Пауліста</h5>
+                    <div class="card-content">
+                        <p>Країна: Бразилія<br>
+                            Місто: Сан-Паулу<br>
+                            Дата створення: 1891 рік<br>
+                            Рейтинг туристів: 4.6/5 <br> <a href="Brazil/Аведіна Пауліста.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/Пелурінью.jpg');">
+                    <h5 class="card-title">Історичний центр Пелурінью</h5>
+                    <div class="card-content">
+                        <p>Країна: Бразилія<br>
+                            Місто: Сальвадор<br>
+                            Дата створення: 16-17 століття<br>
+                            Рейтинг туристів: 4.7/5 <br> <a href="Brazil/Історичний центр Пелурінью.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/ігасу.jpg');">
+                    <h5 class="card-title">Водоспади Ігуасу</h5>
+                    <div class="card-content">
+                        <p>Країна: Бразилія<br>
+                        Місто: Фос-ду-Ігуасу<br>
+                        Дата створення: природна пам'ятка <br>
+                        Рейтинг туристів: 4.9/5 <br> <a href="Brazil/Водоспади Ігасу.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="5">
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/обеліск.jpg');">
+                    <h5 class="card-title"> Обеліск</h5>
+                    <div class="card-content">
+                        <p>Країна: Аргентина<br>
+                            Місто: Буенос-Айрес<br>
+                            Рік створення: 1936 рік<br>
+                            Рейтинг туристів: 4.55/5 <br> <a href="Argentina/Обеліск.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/вогяна_земля.jpg');">
+                    <h5 class="card-title">Національний парк Вогняна Земля</h5>
+                    <div class="card-content">
+                        <p>Країна: Аргентина<br>
+                            Місто: Ушуайя<br>
+                            Рік створення: 1960 рік<br>
+                            Рейтинг туристів: 4.8/5 <br> <a href="Argentina/Вогняна Земля.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/єзуїтський_кв.jpg');">
+                    <h5 class="card-title">Єзуїтський квартал</h5>
+                    <div class="card-content">
+                        <p>Країна: Аргентина<br>
+                            Місто: Кордова<br>
+                            Рік створення: 17-18 століття<br>
+                            Рейтинг туристів: 4.6/5 <br> <a href="Argentina/Єзуїтський кв.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/Виноробні\ регіону\ Мендоса.jpg');">
+                    <h5 class="card-title">Виноробні регіону Мендоса</h5>
+                    <div class="card-content">
+                        <p>Країна: Аргентина<br>
+                            Місто: Мендоса<br>
+                            Рік створення: виноробна традиція з 16 століття<br>
+                            Рейтинг туристів: 4.7/5 <br> <a href="Argentina/Виноробні регіону Мендоса.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="5">
+            <div class="col-md-6  mb-4 card-container" >
+                <div class="card" style="background-image: url('img/Мачу-Пікчу.jpg');">
+                    <h5 class="card-title">Мачу-Пікчу</h5>
+                    <div class="card-content">
+                        <p>Країна: Перу<br>
+                            Місто: Куско<br>
+                            Рік створення: близько 1450 року<br>
+                            Рейтинг туристів: 4.9/5 <br> <a href="peru/Мачу-Пікчу.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/плаза_майор.jpg');">
+                    <h5 class="card-title">Плаза Майор</h5>
+                    <div class="card-content">
+                        <p>Країна: Перу<br>
+                            Місто: Ліма<br>
+                            Рік створення: 1535 рік<br>
+                            Рейтинг туристів: 4.5/5 <br> <a href="peru/Плаза Майор.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/Monasterio_de_Santa_Catalina\,_Arequipa.jpg');">
+                    <h5 class="card-title">Монастир Санта-Каталіна</h5>
+                    <div class="card-content">
+                        <p>Країна: Перу<br>
+                            Місто: Арекипа<br>
+                            Рік створення: 1579 рік<br>
+                            Рейтинг туристів: 4.6/5 <br> <a href="peru/Монастир Санта-Каталіна.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/uorus.jpg');">
+                    <h5 class="card-title">Острови Урос на озері Тітікака</h5>
+                    <div class="card-content">
+                        <p>Країна: Перу<br>
+                            Місто: Пуно<br>
+                            Рік створення: традиція з доінкського періоду<br>
+                            Рейтинг туристів: 4.7/5 <br> <a href="peru/Острови Урос на озері Тітікака.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="5">
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/плаза_армас.jpg');">
+                    <h5 class="card-title"> Плаза де Армас</h5>
+                    <div class="card-content">
+                        <p>Країна: Чилі<br>
+                            Місто: Сантьяго<br>
+                            Рік створення: 1541 рік<br>
+                            Рейтинг туристів: 4.4/5 <br> <a href="chilli/Плаза де армас.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/вальпараїсо.jpg');">
+                    <h5 class="card-title">Історичний квартал</h5>
+                    <div class="card-content">
+                        <p>Країна: Чилі<br>
+                            Місто: Вальпараїсо<br>
+                            Рік створення: 19 століття<br>
+                            Рейтинг туристів: 4.6/5 <br> <a href="chilli/Історичний квартал.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/торрес-дель-пайне.jpg');">
+                    <h5 class="card-title">Національний парк Торрес-дель-Пайне</h5>
+                    <div class="card-content">
+                        <p>Країна: Чилі<br>
+                            Місто: Пуерто-Наталес<br>
+                            Рік створення: 1959 рік<br>
+                            Рейтинг туристів: 4.9/5<br> <a href="chilli/Національний парк Торрес-дель-Пайне.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-4 card-container">
+                <div class="card" style="background-image: url('img/місячна_долина.jpg');">
+                    <h5 class="card-title">Місячна долина </h5>
+                    <div class="card-content">
+                        <p>Країна: Чилі<br>
+                            Місто: Сан-Педро-де-Атакама<br>
+                            Рік створення: природна пам'ятка<br>
+                            Рейтинг туристів: 4.8/5 <br> <a href="chilli/Місячна Долина.html" class="btn btn-primary mt-2">Докладніше</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/your_telegram" target="_blank">
+            <img src="img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=YOURNUMBER" target="_blank">
+            <img src="img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram" target="_blank">
+            <img src="img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
