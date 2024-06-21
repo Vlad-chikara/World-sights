@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Європа</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+
+        .content-block {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .modal-fullscreen {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            position: fixed;
+            left: 0; top: 0; right: 0; bottom: 0;
+        }
+
+        .modal-fullscreen .modal-content {
+            height: 100%;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen img {
+            width: 95%;
+            height: auto;
+        }
+        p{
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="../Головна.html"><img src="../img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="../eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="../eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="../eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="../asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="../asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="../asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../SA/usa.html">США</a>
+                        <a class="dropdown-item" href="../SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="../SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="../SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="../EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="../EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="../EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="5" style="text-align: center; margin: 20px;">
+                <h2>Статуя Христа-Спасителя</h2>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100" style="text-align: center; margin: 5px;">
+                <img src="../Brazil/Статуя Христа-Спасителя.jpg" style="width: 80%;" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px; font-size: 17px;">
+                <p>Статуя Христа-Спасителя, розташована на вершині гори Корковаду в Ріо-де-Жанейро, Бразилія, є одним з найвідоміших монументів у світі. Ця величезна статуя, що зображує Ісуса Христа з розпростертими руками, стала символом християнської віри та бразильської культури.</p>
+                <p>Ідея створення статуї виникла на початку 20 століття. У 1921 році, з нагоди святкування 100-річчя незалежності Бразилії, була запропонована ідея зведення великого монументу на вершині гори Корковаду. Архітектор Ейтор да Сілва Кошта очолив проект, а французький скульптор Поль Ландовські створив модель статуї. Інженер Альберт Како та румунський скульптор Георге Леоніда також внесли значний вклад у реалізацію проекту.</p>
+                <p>Будівництво статуї розпочалося в 1926 році і тривало до 1931 року. Статуя виготовлена з залізобетону та облицьована стеатитом, відомим своїми стійкими властивостями до несприятливих погодних умов. Висота статуї становить 30 метрів, а разом з постаментом — 38 метрів. Розмах рук Христа досягає 28 метрів.</p>
+                <p>Церемонія відкриття статуї відбулася 12 жовтня 1931 року, і з того часу вона стала однією з найвизначніших туристичних атракцій Ріо-де-Жанейро. Щороку мільйони туристів з усього світу приїжджають, щоб побачити цей монумент та насолодитися панорамним видом на місто та затоку Гуанабара.</p>
+                <p>Статуя Христа-Спасителя символізує мир, надію та милосердя. Вона стала не лише релігійним символом, але й культурною іконою, що відображає дух Бразилії. У 2007 році монумент був визнаний одним із Нових семи чудес світу, що ще більше підкреслило його глобальне значення.</p>
+                <p>Окрім своєї релігійної та культурної важливості, статуя Христа-Спасителя також є значущим інженерним досягненням. Вона стоїть на вершині гори Корковаду, що знаходиться на висоті 710 метрів над рівнем моря, і витримує суворі погодні умови, включаючи сильні вітри та тропічні зливи. Реставраційні роботи проводяться регулярно, щоб забезпечити збереження цього величного монументу для майбутніх поколінь.</p>
+                <p>Статуя Христа-Спасителя також стала місцем проведення численних культурних та релігійних заходів. Наприклад, під час великих християнських свят, таких як Великдень та Різдво, біля підніжжя статуї проводяться урочисті богослужіння та концерти.</p>
+                <p>У підсумку, статуя Христа-Спасителя є не лише архітектурним шедевром, але й символом віри, надії та єднання. Вона продовжує надихати людей з усього світу, нагадуючи про важливість миру, любові та милосердя в нашому житті.</p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/your_telegram" target="_blank">
+            <img src="../img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=YOURNUMBER" target="_blank">
+            <img src="../img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram" target="_blank">
+            <img src="../img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 10px; top: 10px; font-size: 2rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="../Brazil/Статуя Христа-Спасителя.jpg" class="img-fluid" alt="Колізей">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

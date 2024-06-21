@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Європа</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+
+        .content-block {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .modal-fullscreen {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            position: fixed;
+            left: 0; top: 0; right: 0; bottom: 0;
+        }
+
+        .modal-fullscreen .modal-content {
+            height: 100%;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen img {
+            width: 95%;
+            height: auto;
+        }
+        p{
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="../Головна.html"><img src="../img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="../eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="../eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="../eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="../asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="../asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="../asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../SA/usa.html">США</a>
+                        <a class="dropdown-item" href="../SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="../SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="../SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="../EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="../EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="../EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="5" style="text-align: center; margin: 20px;">
+                <h2>Водоспади Ігуасу</h2>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100" style="text-align: center; margin: 5px;">
+                <img src="../Brazil/Водоспади Ігуасу.jpg" style="width: 80%;" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px; font-size: 17px;">
+                <p>Водоспади Ігуасу, розташовані на кордоні між Бразилією та Аргентиною, є однією з найбільш вражаючих природних пам'яток світу. Це грандіозне зібрання водоспадів на річці Ігуасу складається з 275 окремих каскадів, що простягаються на протяжність близько 2,7 кілометра. Водоспади Ігуасу є одним з найбільших і найпотужніших водоспадних комплексів на планеті.</p>
+                <p>Історія відкриття водоспадів Ігуасу починається з 1541 року, коли їх вперше побачив іспанський конкістадор Альвар Нуньєс Кабеса де Вака під час своєї експедиції в Південну Америку. Місцеві племена гуарані давно знали про існування цих водоспадів і називали їх "Великою водою".</p>
+                <p>Основна частина водоспадів розташована на території Аргентини, але найбільш захоплюючий вид відкривається з бразильської сторони, звідки можна побачити панорамний краєвид на всю водоспадну систему. Найвідомішою частиною водоспадів є так звана "Горлянка Диявола" (Garganta del Diablo) — величезний і потужний водоспад у формі підкови заввишки 82 метри. Ця ділянка є найвищою і найвражаючою частиною всього комплексу.</p>
+                <p>Водоспади Ігуасу є частиною двох національних парків: Національного парку Ігуасу в Бразилії та Національного парку Ігуасу в Аргентині. Обидва парки внесені до списку Всесвітньої спадщини ЮНЕСКО завдяки їх унікальній екосистемі, багатству флори та фауни. Територія навколо водоспадів покрита густими субтропічними лісами, де мешкає безліч видів тварин, включаючи ягуарів, оцелотів, тапірів, мавп та численні види птахів і метеликів.</p>
+                <p>Водоспади Ігуасу є важливим туристичним напрямком, який щороку відвідують мільйони туристів з усього світу. Відвідувачі можуть насолодитися мальовничими прогулянками по добре облаштованих стежках і мостах, що проходять поблизу водоспадів, а також брати участь у численних екскурсіях на човнах, які дозволяють підпливти близько до самих каскадів і відчути всю силу та велич цієї природної чудодії. Особливо популярною є екскурсія на катерах, яка веде туристів до основи "Горлянки Диявола", забезпечуючи незабутні враження та адреналін.</p>
+                <p>Окрім природної краси, водоспади Ігуасу мають велике значення для навколишнього середовища, оскільки вони є важливим джерелом води для місцевої флори та фауни. Вони також мають економічне значення, приваблюючи туристів і сприяючи розвитку місцевої економіки. Національні парки Ігуасу також відіграють важливу роль у збереженні біорізноманіття та екологічної освіти.</p>
+                <p>Водоспади Ігуасу залишаються одним з найвеличніших природних чудес світу, захоплюючи відвідувачів своєю величністю і красою. Вони символізують силу природи і нагадують про важливість збереження природних ресурсів для майбутніх поколінь.</p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/your_telegram" target="_blank">
+            <img src="../img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=YOURNUMBER" target="_blank">
+            <img src="../img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram" target="_blank">
+            <img src="../img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 10px; top: 10px; font-size: 2rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="../Brazil/Водоспади Ігуасу.jpg" class="img-fluid" alt="Колізей">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
