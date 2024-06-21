@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Європа</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+
+        .content-block {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .modal-fullscreen {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            position: fixed;
+            left: 0; top: 0; right: 0; bottom: 0;
+        }
+
+        .modal-fullscreen .modal-content {
+            height: 100%;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen img {
+            width: 95%;
+            height: auto;
+        }
+        p{
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="../Головна.html"><img src="../img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="../eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="../eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="../eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="../asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="../asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="../asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../SA/usa.html">США</a>
+                        <a class="dropdown-item" href="../SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="../SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="../SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="../EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="../EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="../EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="5" style="text-align: center; margin: 20px;">
+                <h2>Форт Масмак</h2>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100" style="text-align: center; margin: 5px;">
+                <img src="../Saud Ar/Форт Масмак.jpg" style="width: 80%;" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px; font-size: 17px;">
+                <p>Форт Масмак, або Аль-Масмак, розташований у самому серці столиці Саудівської Аравії, Ер-Ріяді, є однією з найбільш значущих історичних пам'яток країни. Ця стародавня фортеця відіграла ключову роль в історії Саудівської Аравії та є важливим символом її культурної спадщини.</p>
+                <p>Форт Масмак був побудований у 1865 році за наказом принца Абдулли ібн Рашида, правителя регіону Хаїль. Основною метою будівництва було укріплення міста Ер-Ріяда і захист від внутрішніх та зовнішніх загроз. Фортеця стала центром військової сили і безпеки, і саме тут відбулася одна з найважливіших подій в історії Саудівської Аравії — битва за Ер-Ріяд у 1902 році. У січні 1902 року, майбутній засновник Саудівської Аравії, Абдул-Азіз ібн Сауд, здійснив успішний напад на форт Масмак. Завоювання цієї фортеці стало переломним моментом у його кампанії по об'єднанню розрізнених територій Аравійського півострова під єдиним прапором.</p>
+                <p>Форт Масмак є яскравим прикладом традиційної аравійської архітектури 19-го століття. Він побудований з використанням місцевих матеріалів, таких як глина, пальмове дерево та дерево. Фортеця має прямокутну форму з чотирма кутовими вежами, кожна з яких має конічну форму і забезпечує огляд місцевості. Центральна частина форту включає великий внутрішній дворик, який використовувався для зборів і церемоній. Внутрішні приміщення форту були пристосовані для життя і включали житлові кімнати, кухні та складські приміщення.</p>
+                <p>Сьогодні форт Масмак є музеєм, відкритим для публіки, де представлені експонати, що розповідають про історію фортеці та роль Абдул-Азіза ібн Сауда в об'єднанні Саудівської Аравії. Відвідувачі можуть ознайомитися з артефактами, фотографіями та документами того періоду, а також побачити реконструйовані інтер'єри форту. Форт Масмак також використовується для проведення культурних заходів і святкувань, що робить його важливим центром культурного життя Ер-Ріяда. Він є популярним туристичним об'єктом, привертаючи відвідувачів з усього світу, які прагнуть доторкнутися до історії та культури Саудівської Аравії.</p>
+                <p>Форт Масмак є не лише архітектурною пам'яткою, але й символом національної єдності та історичної спадщини Саудівської Аравії. Його значення виходить за межі регіону, демонструючи силу і рішучість народу в боротьбі за незалежність і об'єднання. Сьогодні ця фортеця служить нагадуванням про славне минуле і надихає майбутні покоління на збереження і шанування своєї культурної спадщини.</p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/your_telegram" target="_blank">
+            <img src="../img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=YOURNUMBER" target="_blank">
+            <img src="../img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram" target="_blank">
+            <img src="../img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 10px; top: 10px; font-size: 2rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="../Saud Ar/Форт Масмак.jpg" class="img-fluid" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

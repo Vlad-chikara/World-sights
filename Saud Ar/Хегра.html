@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Європа</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <style>
+        .navbar {
+            background-color: #0367d1;
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color:#0367d1; 
+            min-width: 200px;
+            z-index: 1021;
+        }
+
+        .dropdown-item {
+            color: #000000 !important; 
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #007BFF; 
+            color: white !important; 
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007BFF;
+        }
+
+        .content-block {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .modal-fullscreen {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            position: fixed;
+            left: 0; top: 0; right: 0; bottom: 0;
+        }
+
+        .modal-fullscreen .modal-content {
+            height: 100%;
+            border: none;
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0;
+            background: transparent;
+        }
+
+        .modal-fullscreen img {
+            width: 95%;
+            height: auto;
+        }
+        p{
+            text-indent: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Логотип та меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <a class="navbar-brand" href="../Головна.html"><img src="../img/logo1.png" width="15%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Головна.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Європа.html" id="navbarDropdown" role="button">
+                        Європа
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../eu/ukr.html">Україна</a>
+                        <a class="dropdown-item" href="../eu/itl.html">Італія</a>
+                        <a class="dropdown-item" href="../eu/fr.html">Франція</a>
+                        <a class="dropdown-item" href="../eu/span.html">Іспанія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Азія.html" id="navbarDropdown" role="button">
+                        Азія
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../asia/jap.html">Японія</a>
+                        <a class="dropdown-item" href="../asia/ind.html">Індія</a>
+                        <a class="dropdown-item" href="../asia/china.html">Китай</a>
+                        <a class="dropdown-item" href="../asia/SArab.html">Саудівська Аравія</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Північна Америка.html" id="navbarDropdown" role="button">
+                        Північна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../SA/usa.html">США</a>
+                        <a class="dropdown-item" href="../SA/can.html">Канада</a>
+                        <a class="dropdown-item" href="../SA/mex.html">Мексика</a>
+                        <a class="dropdown-item" href="../SA/yam.html">Ямайка</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="../Південна Америка.html" id="navbarDropdown" role="button">
+                        Південна Америка
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../EA/brz.html">Бразилія</a>
+                        <a class="dropdown-item" href="../EA/arg.html">Аргентина</a>
+                        <a class="dropdown-item" href="../EA/peru.html">Перу</a>
+                        <a class="dropdown-item" href="../EA/chilli.html">Чилі</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="5" style="text-align: center; margin: 20px;">
+                <h2>Хегра</h2>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="100" style="text-align: center; margin: 5px;">
+                <img src="../Saud Ar/Хегра.jpg" style="width: 80%;" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="200" style="margin-top: 20px; font-size: 17px;">
+                <p>Мада́ин-Са́лих, також відомий як Ель-Хіджр або Хегра, є однією з найзначніших археологічних пам'яток Саудівської Аравії. Розташований на північному заході країни, цей стародавній місто був важливим центром цивілізації набатеїв, яка процвітала між 2 століттям до н.е. і 2 століттям н.е.</p>
+                <p>Мада́ин-Са́лих є другим за величиною містом набатеїв після їхньої столиці Петри, розташованої в сучасній Йорданії. Археологічна ділянка охоплює площу близько 13,4 квадратних кілометрів і містить 111 збережених гробниць, вирізаних у скелях. Ці гробниці, прикрашені складними фасадами, свідчать про високу майстерність і художній смак набатеїв. Найвідомішою серед них є гробниця Каср аль-Фарід, або "Самотній замок", що вирізняється своїми великими розмірами та незавершеністю.</p>
+                <p>Набатеї були відомі своєю здатністю адаптуватися до суворих умов пустелі, створюючи складну систему водозабезпечення, включаючи колодязі, цистерни та канали. Це дозволило їм перетворити пустелю на процвітаючий торгівельний центр, через який проходили важливі караванні шляхи, що з'єднували Аравію, Єгипет, Сирію та Месопотамію. Торгівля спеціями, ладаном і іншими цінними товарами принесла набатеям значне багатство та вплив.</p>
+                <p>У 2008 році Мада́ин-Са́лих був включений до списку об'єктів Світової спадщини ЮНЕСКО, що підкреслює його унікальне культурне і історичне значення. Це перший об'єкт у Саудівській Аравії, який отримав такий статус. Включення до списку сприяло збільшенню уваги до збереження та дослідження цієї важливої археологічної ділянки.</p>
+                <p>Сьогодні Мада́ин-Са́лих є популярним туристичним напрямком, приваблюючи відвідувачів з усього світу. Туристи можуть оглянути численні гробниці, храми, житлові будівлі та інші археологічні об'єкти, що розповідають про багату історію та культуру набатеїв. Окрім того, територія довкола Мада́ин-Са́лих пропонує вражаючі природні пейзажі, включаючи пустельні дюни, скельні формації та оази, що робить це місце ще більш привабливим для мандрівників.</p>
+                <p>Мада́ин-Са́лих є не лише важливою археологічною пам'яткою, але й символом культурного багатства та історичної спадщини Саудівської Аравії. Його збереження та дослідження сприяють глибшому розумінню історії регіону та спадщини набатеїв, що залишили значний вплив на розвиток цивілізацій Близького Сходу.</p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer mt-5">
+        <p>Контактна інформація:</p>
+        <a href="https://t.me/your_telegram" target="_blank">
+            <img src="../img/telegtam.png" width="50">
+        </a>
+        <a href="viber://chat?number=YOURNUMBER" target="_blank">
+            <img src="../img/viber.png" alt="Viber" width="30">
+        </a>
+        <a href="https://www.instagram.com/your_instagram" target="_blank">
+            <img src="../img/inst.png" alt="Instagram" width="30">
+        </a>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 10px; top: 10px; font-size: 2rem;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <img src="../Saud Ar/Хегра.jpg" class="img-fluid" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
